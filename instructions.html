@@ -14522,14 +14522,15 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="Contributing">Contributing<a class="anchor-link" href="#Contributing">&#182;</a></h3><ul>
 <li>For the writing-assignment, the changes need to be made in <code>_notebooks/index.ipynb</code>. </li>
-<li>Other notebooks will not be evaluated. Students are free to create and edit new notebooks to try and test features on the HTML outpus.</li>
+<li>Other notebooks will not be evaluated.</li>
+<li>Students are free to create and edit new notebooks to try and test features on the HTML outputs.</li>
 </ul>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h3 id="Building-HTML-on-local-system">Building HTML on local system<a class="anchor-link" href="#Building-HTML-on-local-system">&#182;</a></h3><ol>
+<h3 id="Building-HTML-output-on-local-system">Building HTML output on local system<a class="anchor-link" href="#Building-HTML-output-on-local-system">&#182;</a></h3><ol>
 <li>Install the python dependencies with <code>pip install -r requirements.txt</code>.</li>
 <li>Convert all notebooks in <code>_notebooks</code> folder to HTML using <code>jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html</code>.</li>
 <li>The output HTML files would be stored in folder <code>_html</code>.</li>
@@ -14548,6 +14549,22 @@ a.anchor-link {
 <li>Give an appropriate sitename in the site settings.</li>
 <li>Finally the website link would look like <code>https://&lt;site_name&gt;.netlify.app</code></li>
 </ul>
+<p>Once this is done, all changes to github repository should reflect on the netlify website within few minutes after push.</p>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Interactive-Notebooks">Interactive Notebooks<a class="anchor-link" href="#Interactive-Notebooks">&#182;</a></h3><ul>
+<li><strong>Bonus marks for making the notebooks interactive</strong></li>
+<li><a href="https://plotly.com/python/">Plotly</a> is suggested for adding interactive visualizations.</li>
+<li>Plotly outputs are not rendered in HTML by default. The figures needs to stored as HTML in the notebooks. For this replace <code>fig.show()</code> with <code>HTML(fig.to_html(include_plotlyjs='cdn'))</code>. Refer <a href="https://yadav-sachin.github.io/blog/plotly/jupyter/2022/02/25/try-plotly-in-fastpages.html">Plotly HTML rendering</a>.</li>
+<li>Matplotlib animations or Plotly animations are also suggested for making notebooks interactive.</li>
+<li>Maplotlib animations are not rendered in HTML by default. It needs to be enabled by at the beginning of the notebook.<div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
+<span class="n">rc</span><span class="p">(</span><span class="s1">&#39;animation&#39;</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="s1">&#39;jshtml&#39;</span><span class="p">)</span>
+</pre></div>
+</li>
+</ul>
 
 </div>
 </div>
@@ -14555,7 +14572,6 @@ a.anchor-link {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h3 id="What-needs-to-be-submitted?">What needs to be submitted?<a class="anchor-link" href="#What-needs-to-be-submitted?">&#182;</a></h3><ol>
 <li>Link to the Netlify website.</li>
-<li>Link to private GitHub repository (We will ask to make the repositories public, please don't make the repository public before that)</li>
 <li><code>index.html</code> file</li>
 </ol>
 
