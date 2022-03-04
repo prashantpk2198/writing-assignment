@@ -1,4 +1,4 @@
-name: Deploy Main
+name: Deploy
 
 on:
   push:
@@ -8,7 +8,7 @@ on:
     - '_notebooks/demo.ipynb'
     - '.github/workflows/deploy.yml'
 jobs:
-  build-and-deploy-main:
+  build-and-deploy-notebooks:
     runs-on: ubuntu-latest
     strategy:
       matrix:
@@ -24,12 +24,14 @@ jobs:
       # Install dependencies
       - name: Install Dependencies
         run: pip install -r requirements.txt
-      # Convert notebook to HTML
-      - name: convert notebook to HTML
+      # Convert notebooks to HTML
+      - name: convert demo notebook to HTML
+        run: jupyter nbconvert _notebooks/demo.ipynb --to html --output-dir=_html
+      - name: convert main notebook to HTML
         run: jupyter nbconvert _notebooks/main.ipynb --to html --output-dir=_html --output=index
       # Deploy HTML output to gh-pages branch
       - name: Deploy on GitHub pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _build/html
+          publish_dir: _html
