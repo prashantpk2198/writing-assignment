@@ -27,6 +27,8 @@ jobs:
       # Convert notebooks to HTML
       - name: convert all notebook to HTML
         run: jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html
+      - name: process index and demo html file
+        run: chmod +x utils/process_html.sh; ./utils/process_html.sh
       # Deploy HTML output to gh-pages branch
       - name: Deploy on GitHub pages
         uses: peaceiris/actions-gh-pages@v3
