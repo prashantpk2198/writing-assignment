@@ -25,10 +25,8 @@ jobs:
       - name: Install Dependencies
         run: pip install -r requirements.txt
       # Convert notebooks to HTML
-      - name: convert demo notebook to HTML
-        run: jupyter nbconvert _notebooks/demo.ipynb --to html --output-dir=_html
-      - name: convert main notebook to HTML
-        run: jupyter nbconvert _notebooks/main.ipynb --to html --output-dir=_html --output=index
+      - name: convert all notebook to HTML
+        run: jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html
       # Deploy HTML output to gh-pages branch
       - name: Deploy on GitHub pages
         uses: peaceiris/actions-gh-pages@v3
