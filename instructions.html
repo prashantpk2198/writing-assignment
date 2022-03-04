@@ -3,7 +3,7 @@
 <head><meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>index</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
+<title>instructions</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 
 
 
@@ -14515,7 +14515,50 @@ a.anchor-link {
 
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h1 id="Main">Main<a class="anchor-link" href="#Main">&#182;</a></h1>
+<h1 id="Writing-Assignment">Writing Assignment<a class="anchor-link" href="#Writing-Assignment">&#182;</a></h1><h2 id="CS328-2022">CS328 2022<a class="anchor-link" href="#CS328-2022">&#182;</a></h2>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Contributing">Contributing<a class="anchor-link" href="#Contributing">&#182;</a></h3><ul>
+<li>For the writing-assignment, the changes need to be made in <code>_notebooks/index.ipynb</code>. </li>
+<li>Other notebooks will not be evaluated. Students are free to create and edit new notebooks to try and test features on the HTML outpus.</li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Building-HTML-on-local-system">Building HTML on local system<a class="anchor-link" href="#Building-HTML-on-local-system">&#182;</a></h3><ol>
+<li>Install the python dependencies with <code>pip install -r requirements.txt</code>.</li>
+<li>Convert all notebooks in <code>_notebooks</code> folder to HTML using <code>jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html</code>.</li>
+<li>The output HTML files would be stored in folder <code>_html</code>.</li>
+</ol>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="Hosting-on-Netlify">Hosting on <a href="https://www.netlify.com/">Netlify</a><a class="anchor-link" href="#Hosting-on-Netlify">&#182;</a></h3><ul>
+<li><strong>The repository need to be kept private</strong>.</li>
+<li>As GitHub pages requires pro account for hosting private repositories, the websites need to be hosted on Netlify.</li>
+<li>On every <code>push</code> to the repository, the HTML output is generated and pushed to the <code>gh-pages</code> branch of the repository via Github actions.</li>
+<li>Deploy the github repository on Netlify following this <a href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">guide</a>.</li>
+<li>Make sure to choose deploy branch as <code>gh-pages</code> and not <code>main</code> branch.</li>
+<li>Give an appropriate sitename in the site settings.</li>
+<li>Finally the website link would look like <code>https://&lt;site_name&gt;.netlify.app</code></li>
+</ul>
+
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h3 id="What-needs-to-be-submitted?">What needs to be submitted?<a class="anchor-link" href="#What-needs-to-be-submitted?">&#182;</a></h3><ol>
+<li>Link to the Netlify website.</li>
+<li>Link to private GitHub repository (We will ask to make the repositories public, please don't make the repository public before that)</li>
+<li><code>index.html</code> file</li>
+</ol>
+
 </div>
 </div>
 </body>
