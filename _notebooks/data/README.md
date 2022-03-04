@@ -1,1 +1,1 @@
-Place all the data CSV, txt, etc. files in this folder.
+- Place all the data CSV, txt, etc. files in this folder.
