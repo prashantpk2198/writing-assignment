@@ -14567,6 +14567,20 @@ all of MD as it is not optimized for dense, information rich UIs.
      <li>
       Students are free to create and edit new notebooks to try and test features on the HTML outputs.
      </li>
+     <li>
+      Data Files (CSV, json, etc.) needs to be placed in
+      <code>
+       _notebooks/data
+      </code>
+      directory. All asset files (images, gif) need to be placed in
+      <code>
+       _notebooks/assets
+      </code>
+      directory.
+     </li>
+     <li>
+      As a good practive, the large files in data directory should be in compressed format (gzip compression, etc).
+     </li>
     </ul>
    </div>
   </div>
@@ -14604,7 +14618,24 @@ all of MD as it is not optimized for dense, information rich UIs.
       </div>
       <p>
        <strong>
-        Note:
+        Note1:
+       </strong>
+       The bash script
+       <code>
+        process_html.sh
+       </code>
+       inserts link to
+       <code>
+        _html/style.css
+       </code>
+       in each generated HTML output file. So the CSS file
+       <code>
+        _html/style.css
+       </code>
+       won't work without running this command on each build.
+       <br/>
+       <strong>
+        Note2:
        </strong>
        For light-theme remove
        <code>
@@ -14677,6 +14708,22 @@ all of MD as it is not optimized for dense, information rich UIs.
        gh-pages
       </code>
       branch of the repository via Github actions.
+      <strong>
+       Note:
+      </strong>
+      : Sometimes the github actions are not triggered in forked or generated from template repositories. To overcome this, make a tiny non-significant change to
+      <code>
+       .github/workflows/deploy.yml
+      </code>
+      such as adding new-line at the end of file or changing the name of github action in line
+      <code>
+       1
+      </code>
+      of
+      <code>
+       .github/workflows/deploy.yml
+      </code>
+      and push the new changes. This should solve the problem and github actions should be triggered normally on every push from now on. Doing this once is enough.
      </li>
      <li>
       Deploy the github repository on Netlify following this
@@ -14705,9 +14752,16 @@ all of MD as it is not optimized for dense, information rich UIs.
        https://&lt;site_name&gt;.netlify.app
       </code>
      </li>
+     <li>
+      Update the Netlify links in the
+      <code>
+       README.md
+      </code>
+      with your website links.
+     </li>
     </ul>
     <p>
-     Once this is done, all changes to github repository should reflect on the netlify website within few minutes after push.
+     Once this is done, all changes to github repository should reflect on the netlify website within few minutes after each push.
     </p>
    </div>
   </div>
@@ -14734,10 +14788,10 @@ all of MD as it is not optimized for dense, information rich UIs.
       is recommended for adding interactive visualizations.
      </li>
      <li>
-      Matplotlib animations or Plotly animations are also recommended for making notebooks interactive.
+      Matplotlib animations are also recommended for making notebooks interactive.
      </li>
      <li>
-      Maplotlib animations are not rendered in HTML by default. It needs to be enabled by at the beginning of the notebook.
+      Maplotlib animations are not rendered in HTML by default. It needs to be enabled in the notebook by the following snippet:
       <div class="highlight">
        <pre><span></span><span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">rc</span>
 <span class="n">rc</span><span class="p">(</span><span class="s1">'animation'</span><span class="p">,</span> <span class="n">html</span><span class="o">=</span><span class="s1">'jshtml'</span><span class="p">)</span>
@@ -14751,21 +14805,32 @@ all of MD as it is not optimized for dense, information rich UIs.
    <div class="jp-InputPrompt jp-InputArea-prompt">
    </div>
    <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-    <h3 id="What-needs-to-be-submitted?">
-     What needs to be submitted?
-     <a class="anchor-link" href="#What-needs-to-be-submitted?">
+    <h3 id="What-would-be-considered-in-evaluation?">
+     What would be considered in evaluation?
+     <a class="anchor-link" href="#What-would-be-considered-in-evaluation?">
       ¶
      </a>
     </h3>
     <ol>
      <li>
-      Link to the Netlify website.
+      Link to the Netlify website (put the website links in README file)
      </li>
      <li>
-      <code>
-       index.html
-      </code>
-      file
+      From the code repository:
+      <ul>
+       <li>
+        <code>
+         index.html
+        </code>
+        in the gh-pages brach
+       </li>
+       <li>
+        <code>
+         index.ipynb
+        </code>
+        in the main branch
+       </li>
+      </ul>
      </li>
     </ol>
    </div>
