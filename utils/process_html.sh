@@ -6,5 +6,5 @@ for filepath in ./_notebooks/*.ipynb; do
     # echo $filename
     basename=${filename%.ipynb}
     # echo $basename
-    python3 utils/process.py ./_html/$basename.html ./_html/$basename.html
+    python3 utils/style_html.py ./_html/$basename.html ./_html/$basename.html
 done
