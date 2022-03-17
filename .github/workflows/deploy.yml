@@ -26,7 +26,7 @@ jobs:
         run: pip install -r requirements.txt
       # Convert notebooks to HTML
       - name: convert all notebook to HTML
-        run: jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html
+        run: jupyter nbconvert _notebooks/*.ipynb --to html --output-dir=_html --HTMLExporter.theme=dark
       - name: process index and demo html file
         run: chmod +x utils/process_html.sh; ./utils/process_html.sh
       # Deploy HTML output to gh-pages branch
