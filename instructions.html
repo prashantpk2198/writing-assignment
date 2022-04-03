@@ -14581,6 +14581,38 @@ all of MD as it is not optimized for dense, information rich UIs.
      <li>
       As a good practive, the large files in data directory should be in compressed format (gzip compression, etc).
      </li>
+     <li>
+      Add the
+      <code>
+       upstream
+      </code>
+      remote. This saves a reference to the main Writing-Assignment repository, which you can use to keep your repository synchronized with the latest changes.
+      <code>
+       `git remote add upstream git@github.com:cs328-2022/writing-assignment.git
+      </code>
+     </li>
+     <li>
+      Check that the upstream and origin remote aliases are configured correctly by running
+      <code>
+       git remote -v
+      </code>
+      which should display:
+      <pre><code>  origin  git@github.com:CS328-Spring-2022/writing-assignment-&lt;team_name&gt;.git (fetch)
+  origin  git@github.com:CS328-Spring-2022/writing-assignment-&lt;team_name&gt;.git (push)
+  upstream        git@github.com:cs328-2022/writing-assignment.git (fetch)
+  upstream        git@github.com:cs328-2022/writing-assignment.git (push)</code></pre>
+     </li>
+     <li>
+      Synchronize your main branch with the upstream/main branch, more details on
+      <a href="https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork">
+       GitHub Docs
+      </a>
+      :
+      <pre><code>  git checkout main
+  git fetch upstream
+  git merge upstream/main --allow-unrelated-histories</code></pre>
+      We may push some new changes to the main repository and would ask all to synchronize their repositories using the main repository changes with the above fetch and merge command.
+     </li>
     </ul>
    </div>
   </div>
@@ -14833,6 +14865,35 @@ all of MD as it is not optimized for dense, information rich UIs.
       </ul>
      </li>
     </ol>
+   </div>
+  </div>
+  <div class="jp-Cell-inputWrapper">
+   <div class="jp-InputPrompt jp-InputArea-prompt">
+   </div>
+   <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+    <h3 id="Doubts/QnA">
+     Doubts/QnA
+     <a class="anchor-link" href="#Doubts/QnA">
+      ¶
+     </a>
+    </h3>
+   </div>
+  </div>
+  <div class="jp-Cell-inputWrapper">
+   <div class="jp-InputPrompt jp-InputArea-prompt">
+   </div>
+   <div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+    <p>
+     We will be using
+     <a href="https://github.com/cs328-2022/writing-assignment/discussions">
+      GitHub Discussions
+     </a>
+     on the main
+     <code>
+      Writing-Assignment
+     </code>
+     repository for resolving doubts or any other concern.
+    </p>
    </div>
   </div>
  </body>
