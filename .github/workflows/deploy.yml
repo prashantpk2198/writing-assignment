@@ -7,6 +7,8 @@ on:
       - "_notebooks/main.ipynb"
       - "_notebooks/demo.ipynb"
       - ".github/workflows/deploy.yml"
+  workflow_dispatch:
+
 jobs:
   build-and-deploy-notebooks:
     runs-on: ubuntu-latest
