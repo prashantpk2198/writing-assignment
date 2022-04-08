@@ -3,11 +3,8 @@ name: Deploy2
 on:
   push:
     branches: [main]
-    paths:
-      - "_notebooks/main.ipynb"
-      - "_notebooks/demo.ipynb"
-      - ".github/workflows/deploy.yml"
   workflow_dispatch:
+    branches: [main]
 
 jobs:
   build-and-deploy-notebooks:
