@@ -1,6 +1,5 @@
 $(document).ready(function() {
     codeToggle = function(){
-        $('div.jp-Cell-inputArea').toggle()
+        $('div.jp-CodeCell > div.jp-Cell-inputWrapper').toggle()
     }
 });
-
