@@ -15,17 +15,18 @@ soup = BeautifulSoup(data, features="lxml")
 soup.title.string = "CS328 Writing Assignment"
 
 # Insert Bootstrap CSS in head
-bootstrap_link_tag = Tag(
+bootstrap_btn_link_tag = Tag(
     builder=soup.builder,
     name="link",
     attrs={
         "rel": "stylesheet",
-        "href": "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css",
-        "integrity": "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
-        "crossorigin": "anonymous",
+        "href": "bootstrap_only_btn.css",
+        # "href": "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css",
+        # "integrity": "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
+        # "crossorigin": "anonymous",
     },
 )
-soup.head.append(bootstrap_link_tag)
+soup.head.append(bootstrap_btn_link_tag)
 
 # Insert jQuery
 jquery_script_tag = Tag(
