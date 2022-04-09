@@ -4,7 +4,6 @@ import sys
 from bs4 import BeautifulSoup, Tag
 
 path = sys.argv[1]
-path = "_html/demo.html"
 save_path = sys.argv[2]
 with open(path, "r") as f:
     data = f.read()
@@ -21,9 +20,6 @@ bootstrap_btn_link_tag = Tag(
     attrs={
         "rel": "stylesheet",
         "href": "bootstrap_only_btn.css",
-        # "href": "https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css",
-        # "integrity": "sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",
-        # "crossorigin": "anonymous",
     },
 )
 soup.head.append(bootstrap_btn_link_tag)
@@ -47,11 +43,7 @@ style_link_tag = Tag(
 soup.head.append(style_link_tag)
 
 # Insert our custom js script
-script_src_tag = Tag(
-    builder=soup.builder,
-    name="script",
-    attrs = {"src": "script.js"}
-)
+script_src_tag = Tag(builder=soup.builder, name="script", attrs={"src": "script.js"})
 soup.head.append(script_src_tag)
 
 with open(save_path, "w") as f:
