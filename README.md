@@ -5,7 +5,8 @@
 <!-- Replace this link with your generated Netlify website link -->
 Link: https://writing-assignment-cs328.netlify.app
 
-Instructions: https://writing-assignment-cs328.netlify.app/instructions  
-> If this instructions page is not rendered properly, view original notebook at [Link](https://github.com/cs328-2022/writing-assignment/blob/main/_notebooks/instructions.ipynb)
+Instructions: [Link](https://github.com/cs328-2022/writing-assignment/blob/main/_notebooks/instructions.ipynb)
+
+Suggestions based on Initial review: [Link](https://github.com/cs328-2022/writing-assignment/blob/main/_notebooks/suggestions.ipynb)
 
 Demo: https://writing-assignment-cs328.netlify.app/demo
